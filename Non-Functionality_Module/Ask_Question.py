@@ -1,9 +1,7 @@
 import datetime
-import time
 import unittest
-import pytest
+
 from selenium import webdriver
-from selenium.webdriver import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
@@ -23,8 +21,8 @@ class Askques_secanrios(unittest.TestCase):
         driver.find_element(By.XPATH, "//body[1]/div[2]/header[1]/div[1]/div[1]/ul[1]/li[2]/a[1]").click()
         driver.find_element(By.NAME, "login[username]").send_keys("syedqc09@gmail.com")
         driver.find_element(By.NAME, "login[password]").send_keys("Tajusyed1!")
-        driver.find_element(By.NAME, "send").click( )
-        cur_title = driver.title
+        # driver.find_element(By.NAME, "send").click( )
+        # cur_title = driver.title
         if cur_title == "Home Page - Magento eCommerce - website to practice selenium | demo website for automation testing | selenium practice sites | selenium demo sites | best website to practice selenium automation | automation practice sites Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites":
             print("Test Pass -Logged with valid credentials")
         else:
