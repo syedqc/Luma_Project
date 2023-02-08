@@ -17,7 +17,7 @@ class Aboutus_secanrios(unittest.TestCase):
         ch_options.add_experimental_option("detach", True)
         driver = webdriver.Chrome(executable_path="D:\\chromedriver.exe", options=ch_options)
         driver.delete_all_cookies()
-        driver.maximize_window()
+        driver.maximize_window() //
         driver.implicitly_wait(10)
         driver.get("https://magento.softwaretestingboard.com/")
         driver.find_element(By.XPATH, "//body[1]/div[2]/header[1]/div[1]/div[1]/ul[1]/li[2]/a[1]").click()
